@@ -1,0 +1,21 @@
+# Archivos de compilación de PlatformIO
+.pio/
+.vscode/
+
+# Archivos compilados de C++
+*.elf
+*.bin
+*.hex
+
+# Python
+__pycache__/
+venv/
+*.pyc
+
+# Datos (Son muy pesados para git, se guardan local)
+data/raw/*.csv
+data/processed/*.csv
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
