@@ -14,7 +14,12 @@ venv/
 
 # Datos (Son muy pesados para git, se guardan local)
 data/raw/*.csv
+data/raw/*.xlsx
 data/processed/*.csv
+data/processed/*.xlsx
+data/*.csv
+data/*.xlsx
+
 
 # Sistema Operativo
 .DS_Store
