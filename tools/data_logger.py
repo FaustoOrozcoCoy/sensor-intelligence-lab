@@ -13,13 +13,13 @@ import argparse
 class DataLogger:
     """Clase para leer datos del puerto COM y guardarlos en CSV"""
     
-    def __init__(self, port, baudrate=115200, csv_file='../data/registro.csv'):
+    def __init__(self, port, baudrate=921600, csv_file='../data/registro.csv'):
         """
         Inicializa el logger de datos
         
         Args:
             port (str): Puerto COM (ej: 'COM3' en Windows)
-            baudrate (int): Velocidad del puerto (default: 115200)
+            baudrate (int): Velocidad del puerto (default: 921600)
             csv_file (str): Ruta del archivo CSV de salida
         """
         self.port = port  # Puerto serial a usar
