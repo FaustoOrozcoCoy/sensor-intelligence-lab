@@ -21,10 +21,10 @@ This project implements a deterministic signal acquisition pipeline using an ESP
 *Figure 1: ESP32 connected to Digilent Analog Discovery for Sine wave generation and Logic Profiling.*
 
 ## 📊 Validation & Metrics (The "Proof of Work")
-We validated the system using external instrumentation to ensure timing precision.
+The system was validated using external instrumentation to ensure timing precision and signal integrity.
 
 ### 1. Jitter Analysis
-Using the Logic Analyzer, we measured the sampling period stability.
+Using a Logic Analyzer, the sampling period stability was measured to verify determinism.
 ![Logic Analyzer Jitter](docs/assets/logic_jitter.png)
 *Figure 2: Measurement of the 1ms sampling period. Observed Jitter: ±5µs (within acceptable bounds for 1kHz sampling).*
 
