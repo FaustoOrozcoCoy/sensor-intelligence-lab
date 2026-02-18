@@ -6,7 +6,6 @@ static volatile uint16_t _last_val = 0;
 static volatile uint32_t _sample_count = 0;
 static hw_timer_t *_timer = NULL;
 
-// The ISR stays here, hidden from the rest of the world
 void IRAM_ATTR onTimer()
 {
     _last_val = analogRead(34);
