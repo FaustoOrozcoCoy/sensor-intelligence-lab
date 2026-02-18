@@ -17,7 +17,7 @@ This project implements a deterministic signal acquisition pipeline using an ESP
 4. **Python Pipeline:** Real-time data logging and spectral analysis.
 
 ## 📸 Hardware Setup
-![Hardware Setup](/../../docs/assets/setup.jpg)
+![Hardware Setup](/docs/assets/setup.jpg)
 *Figure 1: ESP32 connected to Digilent Analog Discovery for Sine wave generation and Logic Profiling.*
 
 ## 📊 Validation & Metrics (The "Proof of Work")
@@ -25,12 +25,12 @@ The system was validated using external instrumentation to ensure timing precisi
 
 ### 1. Jitter Analysis
 Using a Logic Analyzer, the sampling period stability was measured to verify determinism.
-![Logic Analyzer Jitter](/../docs/assets/logic_jitter.png)
+![Logic Analyzer Jitter](/docs/assets/logic_jitter.png)
 *Figure 2: Measurement of the 1ms sampling period. Observed Jitter: ±5µs (within acceptable bounds for 1kHz sampling).*
 
 ### 2. Signal Reconstruction (FFT)
 A 10Hz Sine wave was sampled at 1kHz. The FFT results confirm a clean peak at the target frequency with minimal noise floor.
-![FFT Analysis](docs/assets/sine_fft.png)
+![FFT Analysis](/docs/assets/sine_fft.png)
 *Figure 3: Time-domain and Frequency-domain analysis of the captured signal.*
 
 ## 📁 Repository Structure
