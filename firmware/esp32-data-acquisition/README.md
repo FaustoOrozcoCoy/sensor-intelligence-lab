@@ -17,7 +17,7 @@ This project implements a deterministic signal acquisition pipeline using an ESP
 4. **Python Pipeline:** Real-time data logging and spectral analysis.
 
 ## 📸 Hardware Setup
-![Hardware Setup](../docs/assets/setup.jpg)
+![Hardware Setup](/../docs/assets/setup.jpg)
 *Figure 1: ESP32 connected to Digilent Analog Discovery for Sine wave generation and Logic Profiling.*
 
 ## 📊 Validation & Metrics (The "Proof of Work")
