@@ -1,48 +1,57 @@
-# Sensor Intelligence Lab
-**Author:** Fausto Orozco Coy, MSc.  
-**Status:** 🚀 Active Development - Week 1: High-Fidelity Signal Acquisition.
+# Sensor Intelligence & Embedded Systems Lab
 
-## 🎯 Project Scope
-This project implements a deterministic signal acquisition pipeline using an ESP32. The goal is to move away from non-deterministic `delay()` based loops towards hardware-timed sampling, suitable for high-fidelity DSP and TinyML applications.
+**Engineer:** Fausto Orozco Coy, MSc.
+**Focus:** Firmware Engineering | DSP | RTOS | Mixed-Signal IC Drivers
+**Status:** 🚀 Active Development (Week 3)
 
-### 🛠 Tech Stack
-- **Firmware:** C++ (ESP-IDF/Arduino Framework), Hardware Timers, ISR (Interrupt Service Routines).
-- **Tooling:** PlatformIO, Python 3.12 (Pandas, Matplotlib, SciPy).
-- **Instrumentation:** Digilent Analog Discovery (Explorer) for Signal Generation and Logic Analysis.
+---
 
-## 🏗 System Architecture
-1. **Hardware Timer:** Configured at 1MHz tick rate.
-2. **ISR:** Discharged every 1,000 ticks (1kHz sampling). Includes a toggle pin for latency profiling.
-3. **Serial Bridge:** 921,600 baud rate transmission in raw CSV format.
-4. **Python Pipeline:** Real-time data logging and spectral analysis.
+## 🎯 Portfolio Overview
+This monorepo documents my transition from Academic Research to **Industrial Firmware Engineering**. It serves as a laboratory for mastering hard-tech concepts including deterministic sampling, Real-Time Operating Systems (FreeRTOS), and drivers for custom silicon.
 
-## 📸 Hardware Setup
-![Hardware Setup](docs/assets/setup.jpg)
-*Figure 1: ESP32 connected to Digilent Analog Discovery for Sine wave generation and Logic Profiling.*
+### 🛠 Core Tech Stack
+- **Languages:** C++ (Embedded), Python (Data Analysis), C (Drivers).
+- **Platforms:** ESP32 (Xtensa), RISC-V, Custom SKY130 Silicon.
+- **Tooling:** PlatformIO, Git Flow, Digilent WaveForms (Logic Analyzer/Scope).
+- **Frameworks:** FreeRTOS, Pandas/SciPy (DSP), HAL Design.
 
-## 📊 Validation & Metrics (The "Proof of Work")
-The system was validated using external instrumentation to ensure timing precision and signal integrity.
+---
 
-### 1. Jitter Analysis
-Using a Logic Analyzer, the sampling period stability was measured to verify determinism.
-![Logic Analyzer Jitter](docs/assets/logic_jitter.png)
-*Figure 2: Measurement of the 1ms sampling period. Observed Jitter: ±5µs (within acceptable bounds for 1kHz sampling).*
+## 🗂️ Engineering Modules (Projects)
 
-### 2. Signal Reconstruction (FFT)
-A 10Hz Sine wave was sampled at 1kHz. The FFT results confirm a clean peak at the target frequency with minimal noise floor.
-![FFT Analysis](docs/assets/sine_fft.png)
-*Figure 3: Time-domain and Frequency-domain analysis of the captured signal.*
+### 1. ⚡ [Deterministic Data Acquisition Pipeline](./firmware/esp32-data-acquisition/)
+**Objective:** Eliminate software jitter in signal processing.
+- Implementation of **Hardware Timer Interrupts** (1kHz precise sampling).
+- High-speed Serial Bridge (921kbps) to Python.
+- **Validation:** Jitter measured at <5µs using Logic Analyzer. FFT spectral analysis.
+- [👉 View Technical Documentation](./firmware/esp32-data-acquisition/)
 
-## 📁 Repository Structure
-- `/firmware`: PlatformIO project source code.
-- `/tools`: Python data logger and Jupyter analysis notebooks.
-- `/data`: Local storage for datasets (CSV).
-- `/docs`: Schematics and engineering logs.
+### 2. 🔌 [OpAmpLab130: Custom Silicon Driver (HAL + CLI)](./firmware/opamplab-driver/)
+**Objective:** Control interface for a custom Mixed-Signal ASIC.
+- **Architecture:** Layered design (Hardware Abstraction Layer vs Application).
+- **Protocol:** Bit-banged Shift Register driver for custom IC configuration.
+- **Feature:** Interactive Command Line Interface (CLI) for real-time chip tuning.
+- [👉 View Driver & Architecture](./firmware/opamplab-driver/)
 
-## 🚀 Setup
-1. **Firmware:** Open `/firmware` in VS Code + PlatformIO and hit `Upload`.
-2. **Python:** 
-   ```bash
-   cd tools
-   pip install -r requirements.txt
-   python data_logger.py
+### 3. 🚦 [RTOS & Concurrency Sandbox](./firmware/freertos-test/)
+**Objective:** Mastering multitasking and resource protection.
+- Implementation of **Tasks, Queues, and Mutexes** in FreeRTOS.
+- Prevention of Race Conditions and Priority Inversion.
+- Memory Management (Heap vs Stack) analysis.
+- [👉 View Source Code](./firmware/freertos-test/)
+
+---
+
+## 📸 Lab Highlights
+*Evidence of hardware-in-the-loop validation.*
+
+| Jitter Analysis (Logic Analyzer) | Spectral Validation (Python DSP) |
+| :---: | :---: |
+| <img src="docs/assets/logic_jitter.png" width="400"> | <img src="docs/assets/sine_fft.png" width="400"> |
+| *Hardware Timer precision validation* | *10Hz Sine Wave Reconstruction* |
+
+---
+
+## 📬 Contact
+Open to roles in **Firmware Engineering**, **Embedded Systems**, and **Application Engineering**.
+[forozco@uniquindio.edu.co]
