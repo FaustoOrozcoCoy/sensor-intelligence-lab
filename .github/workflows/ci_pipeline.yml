@@ -1,0 +1,38 @@
+name: Firmware CI
+
+# Se ejecuta al hacer push a la rama main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Usamos Linux en la nube
+
+    steps:
+    # 1. Descargar el código
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. Instalar Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    # 3. Instalar PlatformIO Core
+    - name: Install PlatformIO
+      run: |
+        python -m pip install --upgrade pip
+        pip install platformio
+
+    # 4. Compilar el Driver (OpAmpLab)
+    - name: Build OpAmpLab Driver
+      run: pio run -d firmware/opamplab-driver
+
+    # 5. Ejecutar Análisis Estático (Cppcheck) en la nube
+    - name: Run Static Analysis
+      run: pio check -d firmware/opamplab-driver --fail-on-defect=high,medium
+      # Nota: Solo fallará el pipeline si encuentra errores Medios o Altos. Ignorará los de estilo.

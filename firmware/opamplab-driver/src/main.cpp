@@ -1,6 +1,8 @@
 #include <Arduino.h>
 #include "opamplab.h"
 
+#ifndef PIO_UNIT_TESTING
+
 // Instancia del driver
 OpAmpLab_t myChip;
 
@@ -80,3 +82,4 @@ void loop()
   vTaskDelay(10);
 }
 
+#endif
