@@ -1,4 +1,5 @@
 # Sensor Intelligence & Embedded Systems Lab
+[![Firmware CI](https://github.com/FaustoOrozcoCoy/sensor-intelligence-lab/actions/workflows/ci_pipeline.yml/badge.svg)](https://github.com/FaustoOrozcoCoy/sensor-intelligence-lab/actions/workflows/ci_pipeline.yml)
 
 **Engineer:** Fausto Orozco Coy, MSc.
 **Focus:** Firmware Engineering | DSP | RTOS | Mixed-Signal IC Drivers
