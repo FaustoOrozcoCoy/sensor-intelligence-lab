@@ -34,5 +34,5 @@ jobs:
 
     # 5. Ejecutar Análisis Estático (Cppcheck) en la nube
     - name: Run Static Analysis
-      run: pio check -d firmware/opamplab-driver --fail-on-defect=high,medium
+      run: pio check -d firmware/opamplab-driver --fail-on-defect=medium
       # Nota: Solo fallará el pipeline si encuentra errores Medios o Altos. Ignorará los de estilo.
