@@ -1,0 +1,23 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[0,0],
+"classes.html":[0,1],
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,1],
+"dir_d44c64559bbebec7f509842c48db8b23.html":[1,0,0],
+"files.html":[1,0],
+"globals.html":[1,1,0],
+"globals_func.html":[1,1,1],
+"index.html":[],
+"opamplab_8h.html":[1,0,1,0],
+"opamplab_8h.html#a28e35f768b10a02c56559a9a3486fe02":[1,0,1,0,6],
+"opamplab_8h.html#a8bece1f1cea653beeb510f5f0c86a164":[1,0,1,0,5],
+"opamplab_8h.html#aa9cdca280ba40cd7afbe2a691f7f739a":[1,0,1,0,3],
+"opamplab_8h.html#aaa11e390b38381156c32ff2d013ad53b":[1,0,1,0,2],
+"opamplab_8h.html#ac420ca6dd367ba7e0e73a075502b6cd0":[1,0,1,0,1],
+"opamplab_8h.html#ad0fb810632c953461e0a1ac14db047c6":[1,0,1,0,4],
+"opamplab_8h_source.html":[1,0,1,0],
+"opamplab__regs_8h_source.html":[1,0,0,0],
+"pages.html":[],
+"struct_op_amp_lab__t.html":[0,0,1],
+"unionopamplab__config__t.html":[0,0,0]
+};

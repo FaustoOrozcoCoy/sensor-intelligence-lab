@@ -1,0 +1,5 @@
+<map id="OpAmpLab_t" name="OpAmpLab_t">
+<area shape="rect" id="Node000001" title="Driver Context Structure. Holds the pin configuration and current state of the chip." alt="" coords="22,104,119,131"/>
+<area shape="rect" id="Node000002" href="$unionopamplab__config__t.html" title="OpAmpLab130 Register Map Total Shift Register Length: 16 bits." alt="" coords="5,5,136,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,46,73,104,68,103,68,49"/>
+</map>

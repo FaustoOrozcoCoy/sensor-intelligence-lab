@@ -1,0 +1,8 @@
+<map id="src/opamplab.h" name="src/opamplab.h">
+<area shape="rect" id="Node000001" title="Hardware Abstraction Layer (HAL) for OpAmpLab130 ASIC." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,155,93,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,35,40,80,41,111,50,141,45,141,36,112,35,80,55,30"/>
+<area shape="rect" id="Node000003" href="$opamplab__regs_8h_source.html" title=" " alt="" coords="50,80,170,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="70,30,95,67,90,68,69,35"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="104,106,80,143,76,140,99,109"/>
+</map>
